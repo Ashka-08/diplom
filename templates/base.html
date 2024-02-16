@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+    <title>{% block title %}Дипломная работа{% endblock %}</title>
+</head>
+<body>
+<header class="header">
+    <nav class="navigation">
+        <div class="container">
+            <div class="flex-box">
+                <a href="/"><img src="{% static 'images/logo.png' %}" alt="Лого" class="logo"></a>
+                <ul class="menu">
+                    <li class="menu-list"><a href="/" class="menu-link">Главная</a></li>
+                    <li class="menu-list"><a href="/catalog/" class="menu-link">Каталог</a></li>
+                    <li class="menu-list"><a href="/about/" class="menu-link">О нас</a></li>
+                    <li class="menu-list"><a href="/contacts/" class="menu-link">Контакты</a></li>
+                </ul>
+                <a href="tel:+78009009999">
+                    <div class="flex-box">
+                        <img src="{% static 'images/phone.png' %}" alt="phone" class="icon">
+                        <p class="phone">88009009999</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+{% block content %}
+    <div class="container">
+        Контент базового шаблона
+    </div>    
+{% endblock %}
+
+
+<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/kontsept_nn/1059664826/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Концепт НН</a><a href="https://yandex.ru/maps/47/nizhny-novgorod/category/outdoor_advertising/184107152/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Наружная реклама в Нижнем Новгороде</a><a href="https://yandex.ru/maps/47/nizhny-novgorod/category/printing_house/184107134/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Типография в Нижнем Новгороде</a><iframe src="https://yandex.ru/map-widget/v1/?ll=43.974222%2C56.321012&mode=search&oid=1059664826&ol=biz&z=16.38" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+
+<footer>
+    <div class="container">
+        <div class="flex-box footer-box">
+            <a href="/"><img src="{% static 'images/logo-footer.png' %}" alt="Лого" class="logo"></a>
+            <ul class="menu-down">
+                <li class="menu-list"><a href="/" class="menu-link">Главная</a></li>
+                <li class="menu-list"><a href="/catalog/" class="menu-link">Каталог</a></li>
+                <li class="menu-list"><a href="/about/" class="menu-link">О нас</a></li>
+                <li class="menu-list"><a href="/contacts/" class="menu-link">Контакты</a></li>
+            </ul>
+            <a href="tel:+78009009999" class="btn-footer">
+                <div class="flex-box">
+                    <img src="{% static 'images/phone.png' %}" alt="phone" class="icon">
+                    <p class="phone">88009009999</p>
+                </div>
+            </a>
+        </div>
+        <div class="container">
+            <p class="center-text white-text">2024 г @ Все права защищены</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

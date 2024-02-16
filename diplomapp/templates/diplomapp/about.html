@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="top-section">
+    <div class="container">
+        <h1 class="h1 white-text">Рекламно-производственная компания и типография в Нижнем Новгороде OOO "Концепт НН"</h1>
+        <p class="description-h1">
+            Мы готовы предложить вам лучшие цены без посредников. У нас полный цикл производства — от дизайна до монтажа, гарантийное и послегарантийное обслуживание. 
+            <br>Доверьтесь профессионалам!
+        </p>
+    </div>
+</section>   
+
+
+<section>
+    <div class="container">
+        <h2 class="center-text">{{ title }}</h2>
+        <div class="category-box">
+            <div class="item-plus">
+                <img src="{% static 'images/1.png' %}" alt="" class="icon-plus">
+                <h3>Качество и профессионализм</h3>
+                <p>
+                    За 15 лет нашей работы над наружной рекламой было выполнено огромное количество самых разных проектов. Все работы сопровождаются строгим контролем качества на нашем собственном производстве
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/2.png' %}" alt="" class="icon-plus">
+                <h3>Конкурентная цена</h3>
+                <p>
+                    Мы являемся прямым изготовителем, поэтому наши цены ниже рыночных на 20-30%    
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/3.png' %}" alt="" class="icon-plus">
+                <h3>Суперскорость</h3>
+                <p>
+                    Делаем быстро и без потори качества, даже у больших проектов. От замеров до монтажа обычно проходит не более 10 дней
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/4.png' %}" alt="" class="icon-plus">
+                <h3>Лояльность и забота</h3>
+                <p>
+                    Бесплатно консультируем, советуем и, при этом, не предлагаем лишнего. Экономим ваш бюджет и всегда идем на встречу. Бесплатно выезжаем на замер
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/5.png' %}" alt="" class="icon-plus">
+                <h3>Новаторство и любовь к деталям</h3>
+                <p>
+                    Детали и нестандартные решения — это наша страсть. Мы отслеживаем новинки на рынке рекламы и всегда готовы предложить исполнение «в ногу со временем»
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/6.png' %}" alt="" class="icon-plus">
+                <h3>Гарантия</h3>
+                <p>
+                    Мы дорожим репутацией и используем только качественные материалы. На линзованные светодиоды даем 5 лет гарантии. Обеспечиваем гарантийное и послегарантийное обслуживание
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="dark-section">
+    <div class="container">
+        <h2 class="center-text white-text">Наши работы</h2>
+        <div class="flex-box">
+            <div class="col">
+                <div class="foto1 f1"></div>
+                <div class="foto1 f2"></div>
+            </div>
+            <div class="col">
+                <div class="foto2 f3"></div>    
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="col">
+                <div class="foto2 f4"></div>
+            </div>
+            <div class="col">
+                <div class="foto1 f5"></div> 
+                <div class="foto1 f6"></div>   
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="center-text">Нас выбирают</h2>
+        <div class="row-logo">
+            <img src="{% static 'images/row1.jpg' %}" alt="logo">
+        </div>
+        <div class="row-logo">
+            <img src="{% static 'images/row2.jpg' %}" alt="logo">
+        </div>
+        <div class="row-logo">
+            <img src="{% static 'images/row3.jpg' %}" alt="logo">
+        </div>
+    </div>
+</section>
+{% endblock %}

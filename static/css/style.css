@@ -1,0 +1,324 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0px;
+}
+
+.flex-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+p {
+    padding-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    height: 75px;
+    align-items: center;
+}
+
+.menu-link {
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+.icon {
+    width: 25px;
+    margin-right: 15px;
+}
+
+a .phone {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+footer {
+    background-color: #283558;
+}
+
+.footer-box {
+    margin-top: 25px;
+    align-items: start;
+}
+
+.menu-down {
+    width: 100%;
+    list-style-type: none;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.menu-down .menu-link {
+    color: white;
+    padding: 0px 0px;
+}
+
+.btn-footer {
+    width: 300px;
+    background-color: white;
+    text-decoration: none;
+}
+
+.white-text {
+    color: white;
+}
+
+.center-text {
+    text-align: center
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.top-section {
+    background: url("/static/images/top-fon.jpg") no-repeat;
+    background-size: cover;
+    height: 740px;
+}
+
+.top-box {
+    width: 100%;
+    max-width: 500px;
+}
+
+.home-h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    color: white;
+}
+
+.description-h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.btn-top {
+    text-decoration: none;
+    width: 320px;
+    height: 70px;
+    padding: 20px 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    padding-bottom: 40px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+    padding-bottom: 40px;
+}
+
+.category-box {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+.item {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+}
+
+.foto {
+    width: 100%;
+    height: 350px;
+    background-color: gray;
+    padding-top: 50px;
+}
+
+.dark-section {
+    background-color: #283558;
+}
+
+.item-plus {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center
+}
+
+.icon-plus {
+    width: 100px;
+    height: 100px;
+}
+
+.item-plus h3 {
+    text-transform: uppercase;
+}
+
+.item-plus p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.col {
+    width: 50%;
+}
+
+.foto1 {
+    width: 100%;
+    height: 225px;
+    display: block;
+}
+
+.foto2 {
+    width: 100%;
+    height: 450px;
+}
+
+.col .f1 {
+    background: url("/static/images/Outdoor-advertising.jpg") no-repeat;
+    background-size: cover;
+}
+
+.col .f2 {
+    background: url("/static/images/Interior-design.jpg") no-repeat;
+    background-size: cover;
+}
+
+.col .f3 {
+    background: url("/static/images/Three-dimensional-letters.jpg") no-repeat;
+    background-size: cover;
+}
+
+.col .f4 {
+    background: url("/static/images/Advertising-stands.jpg") no-repeat;
+    background-size: cover;
+}
+
+.col .f5 {
+    background: url("/static/images/Large-format-printing.jpg") no-repeat;
+    background-size: cover;
+}
+
+.col .f6 {
+    background: url("/static/images/Polygraphy.jpg") no-repeat;
+    background-size: cover;
+}
+
+.my-form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 680px;
+    text-align: center
+}
+
+.field-form-div {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.new-fm {
+    padding: 20px 25px;
+}
+
+.btn-form {
+    padding: 20px 25px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #027BF5;
+    color: white;
+    text-align: center
+}
+
+.row-logo {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cat-div {
+    padding: 40px 0;
+}
+
+.item-product {
+    width: 100%;
+    max-width: 250px;
+    padding: 10px;
+}
+
+.foto-product {
+    width: 100%;
+    height: 250px;
+    background-color: gray;
+    padding-top: 50px;
+}
+.link {
+    text-decoration: none;
+    color: black;
+}

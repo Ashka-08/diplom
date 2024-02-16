@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="top-section">
+    <div class="container">
+        <div class="top-box">
+            <h1 class="home-h1">Рекламно-производственная <br>компания и типография в Нижнем Новгороде</h1>
+            <p class="description-h1">
+                Мы готовы предложить вам лучшие цены без посредников. У нас полный цикл производства — от дизайна до монтажа, гарантийное и послегарантийное обслуживание. 
+                <br>Доверьтесь профессионалам!
+            </p>
+            <a href="#form-section" class="btn-top">Оставить заявку</a>
+        </div> 
+    </div>
+</section>   
+
+<section>
+    <div class="container">
+        <h2 class="center-text">Каталог</h2>
+        <div class="category-box">
+            {% for subcategory in subcategories %}
+            <div class="item">
+                {% if subcategory.photo_url %}
+                    <img width="300px" src="{{ subcategory.photo_url }}">
+                {% else %}
+                <div class="foto white-text center-text">no image</div>
+                {% endif %}
+                <h3 class="center-text">{{ subcategory.name }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+<section class="dark-section">
+    <div class="container">
+        <h2 class="center-text white-text">О нас</h2>
+        <div class="category-box">
+            <div class="item-plus">
+                <img src="{% static 'images/1.png' %}" alt="" class="icon-plus">
+                <h3 class="white-text">Качество и профессионализм</h3>
+                <p class="white-text">
+                    За 15 лет нашей работы над наружной рекламой было выполнено огромное количество самых разных проектов. Все работы сопровождаются строгим контролем качества на нашем собственном производстве
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/2.png' %}" alt="" class="icon-plus">
+                <h3 class="white-text">Конкурентная цена</h3>
+                <p class="white-text">
+                    Мы являемся прямым изготовителем, поэтому наши цены ниже рыночных на 20-30%    
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/3.png' %}" alt="" class="icon-plus">
+                <h3 class="white-text">Суперскорость</h3>
+                <p class="white-text">
+                    Делаем быстро и без потори качества, даже у больших проектов. От замеров до монтажа обычно проходит не более 10 дней
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/4.png' %}" alt="" class="icon-plus">
+                <h3 class="white-text">Лояльность и забота</h3>
+                <p class="white-text">
+                    Бесплатно консультируем, советуем и, при этом, не предлагаем лишнего. Экономим ваш бюджет и всегда идем на встречу. Бесплатно выезжаем на замер
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/5.png' %}" alt="" class="icon-plus">
+                <h3 class="white-text">Новаторство и любовь к деталям</h3>
+                <p class="white-text">
+                    Детали и нестандартные решения — это наша страсть. Мы отслеживаем новинки на рынке рекламы и всегда готовы предложить исполнение «в ногу со временем»
+                </p>
+            </div>
+            <div class="item-plus">
+                <img src="{% static 'images/6.png' %}" alt="" class="icon-plus">
+                <h3 class="white-text">Гарантия</h3>
+                <p class="white-text">
+                    Мы дорожим репутацией и используем только качественные материалы. На линзованные светодиоды даем 5 лет гарантии. Обеспечиваем гарантийное и послегарантийное обслуживание
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="center-text">Наши работы</h2>
+        <div class="flex-box">
+            <div class="col">
+                <div class="foto1 f1"></div>
+                <div class="foto1 f2"></div>
+            </div>
+            <div class="col">
+                <div class="foto2 f3"></div>    
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="col">
+                <div class="foto2 f4"></div>
+            </div>
+            <div class="col">
+                <div class="foto1 f5"></div> 
+                <div class="foto1 f6"></div>   
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="dark-section" id="form-section">
+    <div class="container">
+        <h2 class="center-text white-text">Оставьте заявку</h2>
+        {% if not answer %}    
+            <form class="my-form" action="" method="post">
+                {% csrf_token %}
+                {% for fm in form %}
+                <div class="field-form-div">
+                    <p>{{fm}}</p>
+                </div>
+                {% endfor %}
+                <input class="btn-form" type="submit" value="Отправить">
+            </form>
+        {% else %}
+            {{ answer }}  
+        {% endif %}
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="center-text">Нас выбирают</h2>
+        <div class="row-logo">
+            <img src="{% static 'images/row1.jpg' %}" alt="logo">
+        </div>
+        <div class="row-logo">
+            <img src="{% static 'images/row2.jpg' %}" alt="logo">
+        </div>
+        <div class="row-logo">
+            <img src="{% static 'images/row3.jpg' %}" alt="logo">
+        </div>
+    </div>
+</section>
+{% endblock %}

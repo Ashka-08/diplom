@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h1 class="center-text">{{ title}}</h2>
+        {% if product.photo_url %}
+            <img class="item-product" src="{{ product.photo_url }}">
+        {% else %}
+            <div class="foto white-text center-text">no image</div>
+        {% endif %}
+        
+        <p>{{ product.description }}</p>
+        <p>Цена: {{ product.price }} руб.</p>
+        <p>Раздел: {{ category }}</p>
+        <p>Категория: {{ subcategory }}</p>
+
+    </div>
+</section>
+
+{% endblock %}

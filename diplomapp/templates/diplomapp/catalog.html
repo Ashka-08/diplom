@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h1 class="center-text">Каталог</h2>
+        <div class="category-box">
+            {% for product in products %}
+                <div class="item-product center-text">
+                    {% if product.photo_url %}
+                        <img class="foto-product" src="{{ product.photo_url }}">
+                    {% else %}
+                        <div class="foto-product white-text center-text">no image</div>
+                    {% endif %}
+                    <a class="link" href="/catalog/{{ product.pk }}">
+                        <h3>{{ product.name }}</h3>
+                    </a>
+                    <p>Цена: {{ product.price }} руб.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

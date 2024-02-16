@@ -1,0 +1,52 @@
+                
+Products {
+	id integer pk increments
+	name string
+	description string
+	price decimal
+	id_units integer *>* Units.id
+	id_sub_category integer *> SubCategory.id
+	foto binary
+}
+
+Units {
+	id integer pk increments
+	unit_of_measurement string
+}
+
+Orders {
+	id integer pk increments
+	order_number integer
+	date date
+	time time
+	id_user integer *>* Users.id
+	id_products integer *>* Products.id
+	total_price decimal
+	id_status integer *> Status.id
+}
+
+Users {
+	id integer pk increments
+	name string
+	phone_number string
+	email string
+}
+
+Category {
+	id integer pk increments
+	name string
+	picture binary
+}
+
+SubCategory {
+	id integer pk increments
+	name string
+	id_category integer *> Category.id
+	picture binary
+}
+
+Status {
+	id integer pk increments
+	status string
+}
+
