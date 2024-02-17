@@ -1,5 +1,4 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from django.shortcuts import  get_object_or_404
 from django.template.response import TemplateResponse
 import logging
 
@@ -39,7 +38,6 @@ def index(request):
         context['form'] = form
     return TemplateResponse(request, 'diplomapp/index.html', context)
 
-
 def catalog(request):
     logger.info(f'{request} request received')
     products = Product.objects.all()
@@ -52,7 +50,6 @@ def catalog(request):
         'subcategories' : subcategories
         }
     return TemplateResponse(request, 'diplomapp/catalog.html', context)
-
 
 def product(request, product_id):
     logger.info(f'{request} request received')
@@ -67,7 +64,6 @@ def product(request, product_id):
         'subcategory' : subcategory.name
     }
     return TemplateResponse(request, 'diplomapp/product.html', context)
-
 
 def about(request):
     logger.info(f'{request} request received')

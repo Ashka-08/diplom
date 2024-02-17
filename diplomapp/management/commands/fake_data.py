@@ -34,8 +34,6 @@ class Command(BaseCommand):
                         email=f'user{i}@mail.com',
                         phone_number=f'8{random.randint(9000000000,10000000000)}')
             user.save()
-        
-
 
         # Generate fake orders
         for i in range(1, count + 1):

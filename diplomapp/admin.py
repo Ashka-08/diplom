@@ -12,7 +12,6 @@ class ProductAdmin(admin.ModelAdmin):
     """Отдельный продукт."""
     fields = ['name', 'description', 'price', 'unit', 'sub_category', 'foto']
 
-
 class UserAdmin(admin.ModelAdmin):
     """Список пользователей."""
     list_display = ['name']
@@ -20,7 +19,6 @@ class UserAdmin(admin.ModelAdmin):
     search_help_text = 'Поиск по полю Имя (name)'
     """Отдельный пользователь."""
     fields = ['name', 'email', 'phone_number']
-
 
 class UnitAdmin(admin.ModelAdmin):
     """Список единиц измерения."""
@@ -30,7 +28,6 @@ class UnitAdmin(admin.ModelAdmin):
     """Отдельный единица измерения."""
     fields = ['unit_of_measurement']
 
-
 class CategoryAdmin(admin.ModelAdmin):
     """Список категорий."""
     list_display = ['name']
@@ -38,7 +35,6 @@ class CategoryAdmin(admin.ModelAdmin):
     search_help_text = 'Поиск по полю Название (name)'
     """Отдельный категория."""
     fields = ['name', 'picture']
-
 
 class SubCategoryAdmin(admin.ModelAdmin):
     """Список дочерних категорий."""
@@ -48,7 +44,6 @@ class SubCategoryAdmin(admin.ModelAdmin):
     """Отдельный дочерняя категория."""
     fields = ['name', 'picture', 'category']
 
-
 class StatusAdmin(admin.ModelAdmin):
     """Список статусов."""
     list_display = ['status']
@@ -56,7 +51,6 @@ class StatusAdmin(admin.ModelAdmin):
     search_help_text = 'Поиск по полю Название (status)'
     """Отдельный статус."""
     fields = ['status']
-
 
 class OrderAdmin(admin.ModelAdmin):
     """Список заказов."""

@@ -1,6 +1,5 @@
 from django import forms
 
-from diplomapp.models import User
 
 class FormUserAdd(forms.Form):
     name = forms.CharField(max_length=50,
